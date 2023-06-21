@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import os
 import random
-
+#Imports libraries
 class SudokuSolver:
     def __init__(self):
         self.n = 9
