@@ -191,7 +191,7 @@ class SudokuGenerator():
                     return False
         return True
 
-    def __fill_remaining(self, row, col):
+    def fill_remaining(self, row, col):
         if col >= 9 and row < 8:
             row += 1
             col = 0
@@ -217,13 +217,13 @@ class SudokuGenerator():
         for num in range(1, 10):
             if self.__is_safe(row, col, num):
                 self.board[row][col] = num
-                if self.__fill_remaining(row, col + 1):
+                if self.fill_remaining(row, col + 1):
                     return True
                 self.board[row][col] = 0
 
         return False
 
-    def __remove_cells(self):
+    def remove_cells(self):
         empty_cells = self.empty_cells  # Adjust this value to control difficulty level
 
         while empty_cells > 0:
