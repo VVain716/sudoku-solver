@@ -5,7 +5,7 @@ Solves sudokus given a input, can also generate sudokus and solve them.
 
 Execute 
 ```bash
-pip install Pillow
+pip install Pillow==9.3.0
 ``` 
 if not installed already
 
